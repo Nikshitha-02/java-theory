@@ -40,3 +40,95 @@ System.out.println("student:"+s.id+"-"+s.name+"-"+s.grade);
 }
 <img width="744" height="173" alt="Screenshot 2025-09-02 071347" src="https://github.com/user-attachments/assets/5b9d50da-ab82-408b-b025-0e6fa42a47e6" />
 
+
+//STRING OPERATION PROGRAM
+
+package com.sample;
+import java.util.Scanner;
+public class String_programs {
+	//comparing two strings
+	 static void comparestrings(String str1,String str2)
+	{
+		if(str1.equals(str2))
+		{
+			System.out.println("Equal strings");
+		}
+		else
+		{
+			System.out.println("Not equal strings");
+		}
+		}
+	 //concatenating two strings
+	 static void concatenation(String str1,String str2)
+	 {
+		 System.out.println("concatinating two strings:"+str1.concat(str2));//(s1+s2)
+	 }
+	 //length of string
+	 static void length(String str1,String str2)
+	 {
+		 System.out.println("Length of string1 and string2:"+str1.length()+"and"+str2.length());
+	 }
+	 //indexing 1D 
+	 static void indexing_1d(String str1,String str2)
+	 {
+		 System.out.println("first character in str1:"+str1.charAt(0));
+		 System.out.println("last character in str2:"+str2.charAt(str2.length()-1));
+	 }
+	 //indexing 2D
+	 static void indexing_2d(String[][] names)
+	 {
+		 System.out.println("first word in names[0][0]:"+names[0][0]);
+		 System.out.println("third word in names[1][0]:"+names[1][0]);
+	 }
+	 //slicing
+	 static void slicing(String str1,String str2)
+	 {
+		 String slice1=str1.substring(0,1);
+		 System.out.println(slice1);
+		 String slice2=str1.substring(1);
+		 System.out.println(slice2);
+	 }
+	 //reverse string
+	 static void reverse(String str1,String str2)
+	 {
+		 String reverse1="";
+		 for(int i=str1.length()-1;i>=0;i--)
+		 {
+	        reverse1+=str1.charAt(i);
+		 }
+		 System.out.println("reversed string1:"+reverse1);
+		 String reverse2="";
+		 for(int i=str2.length()-1;i>=0;i--)
+		 {
+	        reverse2+=str2.charAt(i);
+		 }
+		 System.out.println("reversed string2:"+reverse2);
+	 }
+	 //replace
+	 static void replace(String str1,String str2)
+	 {
+		 System.out.println("replace r with s:"+str1.replace('r','s'));
+		 System.out.println("replace a with e:"+str2.replace('a','e'));
+	 }
+	 
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sp=new Scanner(System.in);
+		System.out.println("Enter string1,string2");
+String str1=sp.nextLine();
+String str2=sp.nextLine();
+String[][] names= {{"ramesh","suresh"},{"seetha","geetha"},{"raju","rani"}};
+comparestrings(str1,str2);
+concatenation(str1,str2);
+length(str1,str2);
+indexing_1d(str1,str2);
+indexing_2d(names);
+slicing(str1,str2);
+reverse(str1,str2);
+replace(str1,str2);
+sp.close();
+	}
+
+}
+<img width="822" height="401" alt="Screenshot 2025-09-03 000338" src="https://github.com/user-attachments/assets/b0edd84f-bff5-484a-be5d-86222add3e0d" />
+
