@@ -1,0 +1,115 @@
+
+
+package com.sample;
+
+public class Constructor
+
+	{
+
+	    int rollNo;
+
+	    String name;
+
+	    String class_;
+
+	    // Default constructor
+
+	    public Constructor( ) 
+
+	    {
+
+	        rollNo = 567;
+
+	        name = "Nikshitha";
+
+	        class_="CSE-A";
+
+	        System.out.println("default constructor");
+
+	    }
+
+	    public Constructor(int r) 
+
+	    {
+
+	        rollNo = r;
+
+	        name = "varshitha";
+
+	        class_="CSE-B";
+
+	        System.out.println("One parameterized constructor");
+
+	        //one parameterized Constructor
+
+	    }
+
+	    public Constructor(int r,String n) 
+
+	    {
+
+	        rollNo = r;
+
+	       name = n;
+
+	        class_="CSE-C";
+
+	        System.out.println("Two parameterized  constructor");
+
+	        //TWO parameterized Constructor
+
+	    }
+
+	    public Constructor(int r,String n,String c) 
+
+	    {
+
+	        rollNo = r;
+
+	        name = n;
+
+	        class_=c;
+
+	        System.out.println("Three parameterized  constructor");
+
+	        //Three parameterized Constructor
+
+	    }
+
+	    public void displayInfo() {
+
+	        System.out.println("Roll No: " + rollNo);
+
+	        System.out.println("Name: " + name);
+
+	        System.out.println("Class: " + class_);
+
+	    }
+
+	    public static void main(String[] args) 
+
+	    {
+
+	        Constructor s1 = new Constructor(); 
+
+	        s1.displayInfo();
+
+	        Constructor s2 = new Constructor(568);  
+
+	        s2.displayInfo();
+
+	        Constructor s3 = new Constructor(569,"ram"); 
+
+	        s3.displayInfo();
+
+	        Constructor s4 = new Constructor(561,"seetha","CSE-D"); 
+
+	        s4.displayInfo();
+
+	        
+
+	       
+
+	    }
+
+	}
