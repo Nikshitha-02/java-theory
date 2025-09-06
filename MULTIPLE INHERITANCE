@@ -1,0 +1,105 @@
+//MULTIPLE INHERITANCE
+
+
+
+package com.sample;
+
+import java.util.Scanner;
+
+class head
+
+{
+
+	String name;
+
+	public void data()
+
+	{
+
+		System.out.println("service based company");
+
+	}
+
+}
+
+class manager extends head
+
+{
+
+	String id;
+
+}
+
+class employee extends manager
+
+{
+
+	int position;
+
+}
+
+public class Multiple_inheritance {
+
+
+
+	public static void main(String[] args) {
+
+		// TODO Auto-generated method stub
+
+		Scanner scanner=new Scanner(System.in);
+
+		//head object
+
+		   head h = new head();
+
+	        System.out.print("Enter Head name: ");
+
+	        h.name = scanner.nextLine();
+
+
+
+	        // Manager object
+
+	        manager m = new manager();
+
+	        System.out.print("Enter Manager name: ");
+
+	        m.name = scanner.nextLine();
+
+	        System.out.print("Enter Manager id: ");
+
+	        m.id = scanner.nextLine();
+
+	        //employee object
+
+		employee e=new employee();
+
+		  System.out.print("Enter name: ");
+
+	        e.name = scanner.nextLine();
+
+	        System.out.print("Enter id: ");
+
+	        e.id = scanner.nextLine();
+
+	        System.out.print("Enter position (int): ");
+
+	        e.position = scanner.nextInt();
+
+System.out.println("head name: "+h.name);
+
+System.out.println("manager name: "+m.name+"   manager id: "+m.id);
+
+System.out.println("employee name: "+e.name+"    employee id: "+e.id+"   employee position: "+e.position);
+
+
+
+e.data();
+
+scanner.close();
+
+	}
+
+
+
+}
