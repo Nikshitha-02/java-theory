@@ -1,0 +1,95 @@
+//super with over riding
+
+
+
+package com.sample;
+
+import java.util.Scanner;
+
+class head {
+    String name;
+
+    public head(String name) {
+        this.name = name;
+    }
+
+    // Original method
+    public void data() {
+        System.out.println("service based company");
+    }
+}
+
+class manager extends head {
+    String id;
+
+    public manager(String name, String id) {
+        super(name);
+        this.id = id;
+    }
+
+    // Override data method
+    @Override
+    public void data() {
+        System.out.println("manager works in service based company");
+    }
+}
+
+class employee extends manager {
+    int position;
+
+    public employee(String name, String id, int position) {
+        super(name, id);
+        this.position = position;
+    }
+
+    // Override data method
+    @Override
+    public void data() {
+        System.out.println("employee works in service based company at position " + position);
+    }
+}
+
+public class Super {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Head name: ");
+        String headname = scanner.nextLine();
+        head h = new head(headname);
+
+        System.out.print("Enter Manager name: ");
+        String managername = scanner.nextLine();
+        System.out.print("Enter Manager id: ");
+        String managerid = scanner.nextLine();
+        manager m = new manager(managername, managerid);
+
+        System.out.print("Enter Employee name: ");
+        String employeename = scanner.nextLine();
+        System.out.print("Enter Employee id: ");
+        String employeeid = scanner.nextLine();
+
+        System.out.print("Enter Employee position (int): ");
+        int employeeposition = scanner.nextInt();
+        scanner.nextLine();
+
+        employee e = new employee(employeename, employeeid, employeeposition);
+
+        System.out.println("\n--- Output ---");
+        System.out.println("Head name: " + h.name);
+        System.out.println("Manager name: " + m.name + "   Manager id: " + m.id);
+        System.out.println("Employee name: " + e.name + "    Employee id: " + e.id + "   Employee position: " + e.position);
+
+        // Calls to data() method show overriding behavior
+        System.out.print("Head data: ");
+        h.data();  // head's data()
+
+        System.out.print("Manager data: ");
+        m.data();  // manager's overridden data()
+
+        System.out.print("Employee data: ");
+        e.data();  // employee's overridden data()
+
+        scanner.close();
+    }
+}
