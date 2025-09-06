@@ -1,0 +1,81 @@
+//UPCASTING
+
+
+
+
+
+package com.sample;
+
+class RBIBank
+
+{
+
+	public double getrateofinterest()
+
+	{
+
+		return 5.0;
+
+	}
+
+}
+
+class sbiBank extends RBIBank
+
+{//over riding 
+
+	public double getrateofinterest()
+
+	{
+
+		return 6.5;
+
+	}
+
+}
+
+class idbiBank extends RBIBank
+
+{
+
+	public double getrateofinterest()
+
+	{
+
+		return 7.5;
+
+	}
+
+}
+
+public class Bank {
+
+
+
+	public static void main(String[] args) {
+
+		// TODO Auto-generated method stub\
+
+		
+
+RBIBank r=new RBIBank();
+
+RBIBank r1=new sbiBank();//upcasting
+
+//sbiBank s=new sbiBank();
+
+idbiBank ib=new idbiBank();
+
+System.out.println("RBI rate of interest"+r.getrateofinterest());
+
+System.out.println("SBI rate of interest"+r1.getrateofinterest());
+
+System.out.println( "IDBI rate of interest"+ib.getrateofinterest());
+
+
+
+	}
+
+
+
+}
