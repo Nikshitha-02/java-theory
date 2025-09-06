@@ -1,0 +1,98 @@
+
+
+
+
+
+//bank acc code
+
+
+
+
+
+package com.sample;
+
+
+
+public class BankAcc 
+
+{
+
+	private String Accholdername;
+
+	private double balance;   
+
+	//constructor
+
+	public  BankAcc(String Accholdername,double balance)
+
+	{
+
+	 this.Accholdername=Accholdername;
+
+	 this.balance=balance;
+
+	}
+
+	//returning Accholdername
+
+   public String getAccholdername() {
+
+        return Accholdername;
+
+    }
+
+   //returning balance
+
+    public double getBalance() {
+
+        return balance;
+
+    }
+
+    // Deposit 
+
+    public void deposit( double amount,String Accholdername) 
+
+    {
+
+    
+
+        if (amount > 0 &&  this.Accholdername==Accholdername) {
+
+            balance += amount;
+
+            System.out.println( "New balance: " + balance);
+
+        }
+
+        else 
+
+        {
+
+            System.out.println("Invalid deposition");
+
+        }
+
+    }
+
+	//main
+
+public static void main(String[] args) {
+
+    BankAcc account = new BankAcc("nikshitha", 500);
+
+
+
+    System.out.println("Account Holder name: " + account.getAccholdername());
+
+    System.out.println("Initial Balance: " + account.getBalance());
+
+
+
+    account.deposit(200,"nikshitha");
+
+    account.deposit(100,"varshitha");
+
+}
+
+}
