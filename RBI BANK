@@ -1,0 +1,78 @@
+
+NIKSHITHA MATTAPELLY <24wh1a05y8@bvrithyderabad.edu.in>
+Tue, Sep 2, 11:55 AM (4 days ago)
+to me
+
+package com.sample;
+
+class RBIBank
+
+{
+
+	public double getrateofinterest()
+
+	{
+
+		return 5.0;
+
+	}
+
+}
+
+class sbiBank extends RBIBank
+
+{//over riding 
+
+	public double getrateofinterest()
+
+	{
+
+		return 6.5;
+
+	}
+
+}
+
+class idbiBank extends RBIBank
+
+{
+
+	public double getrateofinterest()
+
+	{
+
+		return 7.5;
+
+	}
+
+}
+
+public class Bank {
+
+
+
+	public static void main(String[] args) {
+
+		// TODO Auto-generated method stub\
+
+		
+
+RBIBank r=new RBIBank();
+
+sbiBank s=new sbiBank();
+
+idbiBank ib=new idbiBank();
+
+System.out.println("RBI rate of interest"+r.getrateofinterest());
+
+System.out.println("SBI rate of interest"+s.getrateofinterest());
+
+System.out.println( "IDBI rate of interest"+ib.getrateofinterest());
+
+
+
+	}
+
+
+
+}
