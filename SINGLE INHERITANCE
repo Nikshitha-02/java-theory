@@ -1,0 +1,67 @@
+//SINGLE INHERITANCE
+
+
+
+
+
+package com.sample;
+
+class teacher 
+
+{
+
+	int id;
+
+	String name;
+
+	public void data()
+
+	{
+
+		System.out.println("while teacher teach student learn");
+
+	}
+
+}
+
+class student extends teacher
+
+{
+
+	String section;
+
+}
+
+public class Single_inheritance {
+
+
+
+	public static void main(String[] args) {
+
+		// TODO Auto-generated method stub
+
+teacher t=new teacher();
+
+student s=new student();
+
+t.name="sangeetha";
+
+t.id=567;
+
+s.name="nikshitha";
+
+s.id=58;
+
+s.section="CSE-E";
+
+System.out.println("teacher name: "+t.name+"    teacher id: "+t.id);
+
+System.out.println("student name: "+s.name+"    student id: "+s.id+"     student section: "+s.section);
+
+
+
+	}
+
+
+
+}
